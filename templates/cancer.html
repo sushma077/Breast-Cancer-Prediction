@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cancer</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
+    
+    
+
+
+</head>
+<body>
+    <div class="gap"></div>
+    
+    <header>
+        <div class="nav-bar">
+            <div class="nav-items">
+                <h1>Breast Cancer Prediction</h1>
+                <h2>Know your chances of having cancer in just one click!</h2>
+
+
+            </div>
+            
+        </div>
+         
+    </header>
+
+    <main>
+        <div class="pic">
+            
+        </div>
+
+        <div class="form-container">
+            
+             <form action="{{url_for('predict')}}" method="post" class="frm">
+                <label for="ConcavePoints">Mean of the Concave Points</label>
+                <br>
+                <input type="float" name="ConcavePoints" required>
+                <br>
+                <br>
+
+
+                <label for="Area">Mean of the Area</label>
+                <br>
+                <input type="float" name="Area" required>
+                <br>
+                <br>
+
+                <label for="Radius">Mean of the Radius</label>
+                <br>
+                <input type="float" name="Radius" required>
+                <br>
+                <br>
+                
+
+                <label for="Perimeters">Mean of the Perimeters</label>
+                <br>
+                <input type="float" name="Perimeters" required>
+                <br>
+                <br>
+
+
+                <label for="Concavity">Mean of the Concavity</label>
+                <br>
+                <input type="float" name="Concavity" required>
+                <br>
+                <br>
+
+               
+                
+
+                <input type="submit" value="Predict" id="sub">
+                
+             </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="back">
+            <a href="health.html">Back to Home</a>
+            
+        </div>
+        <div class="back">
+            <h4>Made with ♥ by Sushma</h4>
+        </div>
+    </footer>
+
+</body>
+</html>
