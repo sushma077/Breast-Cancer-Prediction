@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,  url_for, flash, redirect
 import pandas as pd
 import numpy as np
 import pickle
@@ -6,7 +6,13 @@ import os
 
 app=Flask(__name__)
 
-classifier=pickle.load(open("Breast-Cancer-Prediction/cancer_model_prediction.pkl","rb"))
+
+curr=os.path.dirname(__file__)
+model_path=os.path.join(curr, "cancer_model_prediction.pkl")
+
+with open(model_path,"rb") as f:
+    classifier=pickle.load(f)
+
 
 
 @app.route('/')
